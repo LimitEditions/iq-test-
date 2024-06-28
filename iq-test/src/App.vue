@@ -1,6 +1,10 @@
-<script setup>
+<script>
 
 
+export default {
+  name: 'App',
+
+};
 </script>
 
 <template>
@@ -12,10 +16,10 @@
 <style scoped>
 .container {
   width: 320px;
-  height: 46px;
   display: flex;
   align-items: center;
-  margin: 0 auto;
   background-color: #272727;
+  display: flex;
+  flex-direction: column;
 }
 </style>
