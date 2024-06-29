@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button class="main-btn" :style="buttonStyle">{{ button }}</button>
+    <button class="main-btn" :style="buttonStyle" :disabled="disabled"
+    @click="handleClick">{{ button }}</button>
   </div>
 </template>
 
@@ -31,17 +32,30 @@ export default {
     button: {
       type: String,
       default: 'Пройти тест'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    isActive: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     buttonStyle() {
       return {
-        '--bg-color': this.backgroundColor,
-        '--text-color': this.textColor,
+        '--bg-color': this.isActive ? 'rgb(255, 199, 0)' : 'rgb(218, 218, 218)',
+        '--text-color': this.isActive ? 'rgb(13, 12, 17)' : 'rgb(142, 142, 142)',
         'border': this.border,
         'border-radius': this.borderRadius,
         'box-sizing': this.boxSizing
       };
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$emit('click');
     }
   }
 };

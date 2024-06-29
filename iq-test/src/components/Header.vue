@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    props: {
+  props: {
     test: {
       type: String,
     },
@@ -28,11 +28,11 @@ export default {
   },
   data() {
     return {
-        showImageAndText: true,
+      showImageAndText: true,
     };
   },
   mounted() {
-      if (this.$route.path === '/') {
+    if (this.$route.path === '/') {
       this.showImageAndText = false;
     }
   },
@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 .heading {
-    height: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -56,10 +56,10 @@ export default {
   cursor: pointer;
 }
 
-.menu-text{
-    color:rgb(255, 199, 0);
-font-size: 12px;
-text-transform: uppercase;
+.menu-text {
+  color: rgb(255, 199, 0);
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .spacer {

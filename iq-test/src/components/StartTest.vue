@@ -7,7 +7,7 @@
       которая принесет вам скорейший финансовый результат.
     </h3>
     <img class="start-test-img" src="../assets/img/analisBrain.png" alt="analisBrain" />
-    <router-link to="/question1"><MainBtn/></router-link>
+    <router-link to="/question1"><MainBtn isActive='true'/></router-link>
   </div>
 </template>
 

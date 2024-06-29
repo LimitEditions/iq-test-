@@ -40,7 +40,7 @@ export default {
 .start-test-desc-time{
   width: 262px;
   font-family: Merriweather;
-font-size: 18px;
+font-size: 15px;
 font-weight: 400;
 line-height: 20px;
 text-align: left;
@@ -49,6 +49,7 @@ margin-bottom: 20px;
 }
 
 .start-test-desc-time-color{
+  font-family: Merriweather;
   font-weight: 900;
   color: rgb(255, 199, 0);
 
@@ -68,7 +69,7 @@ bottom: 302px;
 position: absolute;
 width: 235px;
 height: 235px;
-left: 170px;
+left: 109px;
 right: 255px;
 top: 1678px;
 bottom: 8px;
@@ -83,12 +84,12 @@ margin-bottom: 33px;
 }
 
 .start-test-desc-text{
-  color: rgb(24, 24, 24);
+color: rgb(24, 24, 24);
 font-family: Merriweather;
-font-size: 20px;
+font-size: 16px;
 font-weight: 400;
 line-height: 23px;
-padding: 29px 15px 31px 14px;
+padding: 29px 15px 31px 15px;
 }
 
 .color-btn {

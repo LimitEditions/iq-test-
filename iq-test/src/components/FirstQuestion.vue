@@ -1,41 +1,56 @@
 <template>
+  <Header />
+  <div class="question">
     <div>
-        <Header/>
-        <img src="../assets/img/Bar.png" alt="Bar">
-        <h2>Ваш пол:</h2>
-        <div>
-      <label>
-        <input type="radio" value="male" v-model="selectedGender" /> Мужской
-      </label>
+      <img class="question-bar" src="../assets/img/Bar.png" alt="Bar">
     </div>
     <div>
-      <label>
-        <input type="radio" value="female" v-model="selectedGender" /> Женский
-      </label>
+      <h2 class="question-headding">Ваш пол:</h2>
+      <div class="question-input">
+        <label v-for="gender in genders" :key="gender.gender"
+          :class="{ 'question-choose': true, 'selected': selectedGender === gender.gender }"> <input
+            class="question-choose-radio" type="radio" :value="gender.gender" v-model="selectedGender"
+            @change="checkSelection" /> <span> {{ gender.gender }}</span> </label>
+      </div>
     </div>
-        <MainBtn :button="button"
-        backgroundColor='#DADADA'
-      textColor="#8E8E8E"
-      border="none"
-      borderRadius="50px"
-      boxSizing="border-box"/>
+    <div>
+      <router-link to="/question2">
+        <MainBtn :button="button" backgroundColor='#DADADA' textColor="#8E8E8E" border="none" borderRadius="50px"
+          boxSizing="border-box" :disabled="!selectedGender" @click="handleNext" :isActive="selectedGender !== null" />
+      </router-link>
     </div>
+  </div>
 </template>
 
 <script>
 import Header from './Header.vue'
 import MainBtn from './MainBtn.vue'
+import '../assets/qutstionStyle.css'
 
 export default {
-    data() {
-        return {
-            button: "Далее"
+  data() {
+    return {
+      button: "Далее",
+      selectedGender: null,
+      genders: [
+        {
+          gender: 'Мужской'
+        },
+        {
+          gender: "Женский"
         }
-    },
-    components: {
-            Header,MainBtn, 
-        }
+      ]
     }
+  },
+  components: {
+    Header, MainBtn,
+  },
+  methods: {
+    checkSelection() {
+      if (this.selectedGender !== null) { }
+    }
+  }
+}
 </script>
 
 <style scoped>

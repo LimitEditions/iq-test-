@@ -3,7 +3,7 @@
     <div>
       <h3 class="main-subheading">Пройдите точный и быстрый</h3>
       <h1 class="main-heading">{{ test }}</h1>
-      <router-link to="/question1"><MainBtn/></router-link>
+      <router-link to="/question1"><MainBtn isActive='true'/></router-link>
       <p class="main-text">
         <span class="main-colortext"
           >И получите рекомендации по развитию своего интеллекта</span
