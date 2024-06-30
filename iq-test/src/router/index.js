@@ -13,6 +13,7 @@ import TenthQuestion from '@/components/TenthQuestion.vue';
 import EleventhQuestion from '@/components/EleventhQuestion.vue';
 import TwelfthQuestion from '@/components/TwelfthQuestion.vue';
 import ThirteenthQuestion from '@/components/ThirteenthQuestion.vue';
+import Finish from "@/components/Finish.vue";
 
 
 const routes = [
@@ -72,7 +73,10 @@ const routes = [
         path: '/question13',
         component: ThirteenthQuestion
     },
-  
+    {
+        path: '/finish',
+        component: Finish
+    },
 ];
 
 const router = createRouter({
