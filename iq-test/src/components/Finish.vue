@@ -7,13 +7,13 @@
         <div class="finish-desc">
             <h3 class="finish-desc-text">В целях защиты персональных данных результат теста, их подробная интерпретация и рекомендации доступны в виде голосового сообщения по звонку с вашего мобильного телефона</h3>
         </div>
-        <h4 class="finish-call">Звоните скорее, запись доступна всего <span class="finish-call-big">10:00 минут</span></h4>
-        <img src="../assets/img/lightning-left.png" alt="lightning">
+        <h4 class="finish-call">Звоните скорее, запись доступна всего <br> <span class="finish-call-big">10:00 </span>минут</h4>
+        <img class="result-img-left" src="../assets/img/lightning-left.png" alt="lightning">
         <div class="finish-tel">
             <img src="../assets/img/tel.png" alt="tel">
             <h3 class="finish-tel-text">Позвонить и прослушать результат</h3>
         </div>
-        <img src="../assets/img/lightning-left.png" alt="lightning">
+        <img class="result-img-right" src="../assets/img/lightning.png" alt="lightning">
         <h6 class="agree">TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,</h6>
     </div>
 </template>
@@ -47,6 +47,8 @@ export default {
 }
 
 .finish-headding{
+margin-top: 18px;
+margin-bottom: 13px;
     color: rgb(255, 255, 255);
 font-family: PT Serif;
 font-size: 15px;
@@ -67,6 +69,8 @@ text-align: center;
 }
 
 .finish-result{
+    margin-top: 22px;
+    margin-bottom: 12px;
     color: rgb(59, 222, 124);
 font-family: PT Serif;
 font-size: 18px;
@@ -85,6 +89,7 @@ background: rgb(28, 39, 65);
 }
 
 .finish-desc-text{
+    padding: 15px 12px;
     color: rgb(255, 255, 255);
 font-family: Roboto;
 font-size: 8px;
@@ -96,6 +101,8 @@ text-transform: uppercase;
 }
 
 .finish-call{
+    margin-top: 8px;
+    margin-bottom: 6px;
     color: rgb(59, 222, 124);
 font-family: PT Serif;
 font-size: 11px;
@@ -106,7 +113,19 @@ text-align: center;
 }
 
 .finish-call-big{
-font-size: 12px;
+font-size: 20px;
+}
+
+.result-img-left{
+    position: absolute;
+width: 165px;
+height: 165px;
+right: 275px;
+top: 390px;
+}
+
+.result-img-right{
+
 }
 
 .finish-tel{
