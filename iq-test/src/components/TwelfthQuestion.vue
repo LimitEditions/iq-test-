@@ -1,4 +1,5 @@
 <template>
+<div>
     <Header />
     <div class="question">
         <div><img class="question-bar" src="../assets/img/Bar (11).png" alt="Bar"></div>
@@ -9,7 +10,7 @@
             <div class="question-group-square-min">
                 <div v-for="item in chooses" :key="item.choose"
                     :class="{ 'question-square': true, 'selected-square': selectedGender === item.choose }"
-                    @change="checkSelection">{{ item.choose }}</div>
+                    @click="selectedGender = item.choose">{{ item.choose }}</div>
             </div>
         </div>
         <router-link to="/question13">
@@ -18,6 +19,7 @@
                 :isActive="selectedGender !== null" />
         </router-link>
     </div>
+</div>
 </template>
 
 <script>

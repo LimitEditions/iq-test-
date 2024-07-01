@@ -14,6 +14,7 @@ import EleventhQuestion from '@/components/EleventhQuestion.vue';
 import TwelfthQuestion from '@/components/TwelfthQuestion.vue';
 import ThirteenthQuestion from '@/components/ThirteenthQuestion.vue';
 import Finish from "@/components/Finish.vue";
+import CallAPI from "@/components/CallAPI.vue";
 
 
 const routes = [
@@ -76,6 +77,10 @@ const routes = [
     {
         path: '/finish',
         component: Finish
+    },
+    {
+        path: '/call',
+        component: CallAPI
     },
 ];
 

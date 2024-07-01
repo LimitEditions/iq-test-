@@ -1,15 +1,14 @@
 <template>
+<div>
     <Header />
     <div class="question">
         <div><img class="question-bar" src="../assets/img/Bar (8).png" alt="Bar"></div>
         <h2 class="question-headding">Выберите правильную фигуру из четырёх пронумерованных.</h2>
         <img src="../assets/img/human.png" alt="human">
         <div class="question-group-square">
-            <div class="question-input">
                 <div v-for="item in chooses" :key="item.choose"
                     :class="{ 'question-square': true, 'selected-square': selectedGender === item.choose }"
-                    @change="checkSelection">{{ item.choose }}</div>
-            </div>
+                    @click="selectedGender = item.choose">{{ item.choose }}</div>
         </div>
         <router-link to="/question10">
             <MainBtn :button="button" backgroundColor='#DADADA' textColor="#8E8E8E" border="none" borderRadius="50px"
@@ -17,6 +16,7 @@
                 :isActive="selectedGender !== null" />
         </router-link>
     </div>
+</div>
 </template>
 
 <script>

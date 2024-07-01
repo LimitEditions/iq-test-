@@ -1,4 +1,5 @@
 <template>
+<div>
     <Header />
     <div class="question">
         <div><img class="question-bar" src="../assets/img/Bar (9).png" alt="Bar"></div>
@@ -15,6 +16,7 @@
                 :isActive="selectedGender !== null" />
         </router-link>
     </div>
+</div>
 </template>
 
 <script>

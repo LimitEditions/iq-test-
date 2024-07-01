@@ -1,5 +1,6 @@
 <template>
-  <Header />
+  <div>
+    <Header />
   <div class="question">
     <div>
       <img class="question-bar" src="../assets/img/Bar.png" alt="Bar">
@@ -19,6 +20,7 @@
           boxSizing="border-box" :disabled="!selectedGender" @click="handleNext" :isActive="selectedGender !== null" />
       </router-link>
     </div>
+  </div>
   </div>
 </template>
 

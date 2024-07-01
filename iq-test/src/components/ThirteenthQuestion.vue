@@ -1,12 +1,13 @@
 <template>
+<div>
     <Header :test="test"/>
     <div class="question load">
         <div><img class="question-bar" src="../assets/img/Bar (13).png" alt="Bar"></div>
         <h1 class="question-headding-load">Обработка <br>результатов</h1>
         <img src="../assets/img/load.png" alt="load">
-        <h2 class="load-text">Определение стиля мышления...........
-            ........... ............................................</h2>
+        <h2 class="load-text">Определение стиля мышления...................... ............................................</h2>
     </div>
+</div>
 </template>
 
 <script>
@@ -27,7 +28,12 @@ export default {
         checkSelection() {
             if (this.selectedGender !== null) { }
         }
-    }
+    },
+    mounted() {
+    setTimeout(() => {
+      this.$router.push('/finish'); 
+    }, 5000);
+  }
 }
 </script>
 
