@@ -20,6 +20,7 @@
 import Header from './Header.vue'
 import MainBtn from './MainBtn.vue'
 import '../assets/qutstionStyle.css'
+import "../assets/imgStyle.css";
 import img1 from '@/assets/img/Rectangle1.png'
 import img2 from '@/assets/img/Rectangle9.png'
 import img3 from '@/assets/img/Rectangle6.png'
@@ -61,15 +62,5 @@ export default {
 </script>
 
 <style scoped>
-.question-img{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 21px;
 
-}
-
-.selected-img{
-    box-sizing: border-box;
-border: 6px solid rgb(255, 199, 0);
-}
 </style>

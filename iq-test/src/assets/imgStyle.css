@@ -1,0 +1,11 @@
+.question-img{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 21px;
+
+}
+
+.selected-img{
+    box-sizing: border-box;
+outline: 6px solid rgb(255, 199, 0);
+}

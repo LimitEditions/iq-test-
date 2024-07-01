@@ -19,20 +19,16 @@
         Звоните скорее, запись доступна всего <br />
         <span class="finish-call-big">10:00 </span>минут
       </h4>
-      <img
-        class="result-img-left"
-        src="../assets/img/lightning-left.png"
-        alt="lightning"
-      />
-      <router-link to="/call"><div class="finish-tel" @click="call">
-        <img src="../assets/img/tel.png" alt="tel" />
-        <h3 class="finish-tel-text">Позвонить и прослушать результат</h3>
-      </div></router-link>
-      <img
-        class="result-img-right"
-        src="../assets/img/lightning.png"
-        alt="lightning"
-      />
+      <div class="img-container">
+        <img class="result-img-left" src="../assets/img/lightning-left.png" alt="lightning"/>
+        <img class="result-img-left" src="../assets/img/lightning-left.png" alt="lightning"/>
+      </div>
+      <router-link to="/call"
+        ><div class="finish-tel" @click="call">
+          <img src="../assets/img/tel.png" alt="tel" />
+          <h3 class="finish-tel-text">Позвонить и прослушать результат</h3>
+        </div></router-link
+      >
       <h6 class="agree">
         TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN
         FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,
@@ -63,7 +59,7 @@ export default {
     },
     call() {
       setTimeout(() => {
-        this.$router.push('/call');
+        this.$router.push("/call");
       }, 2000);
     },
   },
@@ -72,7 +68,7 @@ export default {
 
 <style scoped>
 .finish {
-height: 610px;
+  height: 610px;
 }
 
 .finish-headding {
@@ -155,14 +151,14 @@ height: 610px;
 }
 
 .result-img-right {
-    position: absolute;
-    top: 420px;
-    right: 280px;
+  position: absolute;
+  top: 420px;
+  right: 280px;
 }
 
 .finish-tel {
-z-index: 1;
-padding-left: 15px;
+  z-index: 1;
+  padding-left: 15px;
   width: 290px;
   height: 92px;
   border-radius: 5px;
