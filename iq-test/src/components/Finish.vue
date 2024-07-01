@@ -20,8 +20,8 @@
         <span class="finish-call-big">10:00 </span>минут
       </h4>
       <div class="img-container">
-        <img class="result-img-left" src="../assets/img/lightning-left.png" alt="lightning"/>
-        <img class="result-img-left" src="../assets/img/lightning-left.png" alt="lightning"/>
+        <img class="result-img-left" src="../assets/img/lightning.png" alt="lightning"/>
+        <img class="result-img-right" src="../assets/img/lightning.png" alt="lightning"/>
       </div>
       <router-link to="/call"
         ><div class="finish-tel" @click="call">
@@ -69,17 +69,19 @@ export default {
 <style scoped>
 .finish {
   height: 610px;
+  display: block;
+  position: relative;
+  overflow: hidden;
 }
 
 .finish-headding {
-  margin-top: 18px;
-  margin-bottom: 13px;
+    margin-top: 8px;
+  margin-bottom: 9px;
   color: rgb(255, 255, 255);
   font-family: PT Serif;
   font-size: 15px;
   font-weight: 700;
   line-height: 16px;
-  letter-spacing: 10%;
   text-align: center;
   text-transform: uppercase;
 }
@@ -101,7 +103,6 @@ export default {
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
-  letter-spacing: 10%;
   text-align: center;
   text-transform: uppercase;
 }
@@ -132,8 +133,6 @@ export default {
   font-family: PT Serif;
   font-size: 11px;
   font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 10%;
   text-align: center;
 }
 
@@ -141,19 +140,22 @@ export default {
   font-size: 20px;
 }
 
+.img-container {
+  position: relative; 
+}
+
 .result-img-left {
   position: absolute;
-  width: 165px;
-  height: 165px;
-  right: 275px;
-  top: 390px;
-  left: 86px;
+  width: 200px;
+    height: 200px;
+    right: 458px;
+    top: 363px;
 }
 
 .result-img-right {
   position: absolute;
-  top: 420px;
-  right: 280px;
+  top: 391px;
+  right: 70px;
 }
 
 .finish-tel {
@@ -167,6 +169,7 @@ export default {
   align-items: center;
   gap: 18px;
   cursor: pointer;
+  margin-bottom: 140px;
 }
 
 .finish-tel-text {
