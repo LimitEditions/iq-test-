@@ -1,6 +1,4 @@
 <template>
-<div>
-    <Header />
     <div class="question">
         <div><img class="question-bar" src="../assets/img/Bar (11).png" alt="Bar"></div>
         <h2 class="question-headding">Выберите правильную фигуру из четырёх пронумерованных.</h2>
@@ -15,15 +13,12 @@
         </div>
         <router-link to="/question13">
             <MainBtn :button="button" backgroundColor='#DADADA' textColor="#8E8E8E" border="none" borderRadius="50px"
-                boxSizing="border-box" :disabled="!selectedGender" @click="handleNext"
-                :isActive="selectedGender !== null" />
+                boxSizing="border-box" :disabled="!selectedGender" :isActive="selectedGender !== null" />
         </router-link>
     </div>
-</div>
 </template>
 
 <script>
-import Header from './Header.vue'
 import MainBtn from './MainBtn.vue'
 import '../assets/qutstionStyle.css'
 
@@ -55,7 +50,7 @@ export default {
         }
     },
     components: {
-        Header, MainBtn,
+        MainBtn,
     },
     methods: {
         checkSelection() {

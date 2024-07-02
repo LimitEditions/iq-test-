@@ -1,17 +1,13 @@
 <template>
-<div>
-    <Header :test="test"/>
     <div class="question load">
         <div><img class="question-bar" src="../assets/img/Bar (13).png" alt="Bar"></div>
         <h1 class="question-headding-load">Обработка <br>результатов</h1>
         <img src="../assets/img/load.png" alt="load">
-        <h2 class="load-text">Определение стиля мышления...................... ............................................</h2>
+        <h2 class="load-text">Определение стиля мышления................ ................................................................</h2>
     </div>
-</div>
 </template>
 
 <script>
-import Header from './Header.vue'
 import '../assets/qutstionStyle.css'
 
 export default {
@@ -20,9 +16,6 @@ export default {
             button: "Далее",
             selectedGender: null,
         }
-    },
-    components: {
-        Header
     },
     methods: {
         checkSelection() {

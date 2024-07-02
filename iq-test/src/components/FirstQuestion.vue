@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <Header />
   <div class="question">
     <div>
       <img class="question-bar" src="../assets/img/Bar.png" alt="Bar">
@@ -17,21 +15,20 @@
     <div>
       <router-link to="/question2">
         <MainBtn :button="button" backgroundColor='#DADADA' textColor="#8E8E8E" border="none" borderRadius="50px"
-          boxSizing="border-box" :disabled="!selectedGender" @click="handleNext" :isActive="selectedGender !== null" />
+          boxSizing="border-box" :disabled="!selectedGender" :isActive="selectedGender !== null" />
       </router-link>
     </div>
-  </div>
   </div>
 </template>
 
 <script>
-import Header from './Header.vue'
 import MainBtn from './MainBtn.vue'
 import '../assets/qutstionStyle.css'
 
 export default {
   data() {
     return {
+      test: 'тест на определение IQ',
       button: "Далее",
       selectedGender: null,
       genders: [
@@ -45,7 +42,7 @@ export default {
     }
   },
   components: {
-    Header, MainBtn,
+MainBtn,
   },
   methods: {
     checkSelection() {

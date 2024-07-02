@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <Header />
     <div class="question">
       <div>
         <img class="question-bar" src="../assets/img/Bar (5).png" alt="Bar" />
@@ -30,16 +28,13 @@
           borderRadius="50px"
           boxSizing="border-box"
           :disabled="!selectedGender"
-          @click="handleNext"
           :isActive="selectedGender !== null"
         />
       </router-link>
     </div>
-  </div>
 </template>
 
 <script>
-import Header from "./Header.vue";
 import MainBtn from "./MainBtn.vue";
 import "../assets/qutstionStyle.css";
 import "../assets/imgStyle.css";
@@ -72,7 +67,6 @@ export default {
     };
   },
   components: {
-    Header,
     MainBtn,
   },
   methods: {

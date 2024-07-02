@@ -1,44 +1,48 @@
 <template>
-  <div>
-    <Header />
-    <div class="question finish">
-      <h1 class="finish-headding">Ваш результат рассчитан:</h1>
-      <h2 class="finish-subheadding">
-        <u>Вы относитесь к 3% </u>респондентов, чей уровень интеллекта более чем
-        на 15 пунктов отличается от среднего в большую или меньшую сторону!
-      </h2>
-      <h2 class="finish-result">Скорее получите свой результат!</h2>
-      <div class="finish-desc">
-        <h3 class="finish-desc-text">
-          В целях защиты персональных данных результат теста, их подробная
-          интерпретация и рекомендации доступны в виде голосового сообщения по
-          звонку с вашего мобильного телефона
-        </h3>
-      </div>
-      <h4 class="finish-call">
-        Звоните скорее, запись доступна всего <br />
-        <span class="finish-call-big">10:00 </span>минут
-      </h4>
-      <div class="img-container">
-        <img class="result-img-left" src="../assets/img/lightning.png" alt="lightning"/>
-        <img class="result-img-right" src="../assets/img/lightning.png" alt="lightning"/>
-      </div>
-      <router-link to="/call"
-        ><div class="finish-tel" @click="call">
-          <img src="../assets/img/tel.png" alt="tel" />
-          <h3 class="finish-tel-text">Позвонить и прослушать результат</h3>
-        </div></router-link
-      >
-      <h6 class="agree">
-        TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN
-        FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,
-      </h6>
+  <div class="question finish">
+    <h1 class="finish-headding">Ваш результат рассчитан:</h1>
+    <h2 class="finish-subheadding">
+      <u>Вы относитесь к 3% </u>респондентов, чей уровень интеллекта более чем
+      на 15 пунктов отличается от среднего в большую или меньшую сторону!
+    </h2>
+    <h2 class="finish-result">Скорее получите свой результат!</h2>
+    <div class="finish-desc">
+      <h3 class="finish-desc-text">
+        В целях защиты персональных данных результат теста, их подробная
+        интерпретация и рекомендации доступны в виде голосового сообщения по
+        звонку с вашего мобильного телефона
+      </h3>
     </div>
+    <h4 class="finish-call">
+      Звоните скорее, запись доступна всего <br />
+      <span class="finish-call-big">10:00 </span>минут
+    </h4>
+    <div class="img-container">
+      <img
+        class="result-img-left"
+        src="../assets/img/lightning.png"
+        alt="lightning"
+      />
+      <img
+        class="result-img-right"
+        src="../assets/img/lightning.png"
+        alt="lightning"
+      />
+    </div>
+    <router-link to="/call"
+      ><div class="finish-tel" @click="call">
+        <img src="../assets/img/tel.png" alt="tel" />
+        <h3 class="finish-tel-text">Позвонить и прослушать результат</h3>
+      </div></router-link
+    >
+    <h6 class="agree">
+      TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN
+      FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,
+    </h6>
   </div>
 </template>
 
 <script>
-import Header from "./Header.vue";
 import "../assets/qutstionStyle.css";
 
 export default {
@@ -49,18 +53,13 @@ export default {
       test: "ГОТОВО!",
     };
   },
-  components: {
-    Header,
-  },
   methods: {
     checkSelection() {
       if (this.selectedGender !== null) {
       }
     },
     call() {
-      setTimeout(() => {
-        this.$router.push("/call");
-      }, 2000);
+      this.$router.push("/call");
     },
   },
 };
@@ -75,7 +74,7 @@ export default {
 }
 
 .finish-headding {
-    margin-top: 8px;
+  margin-top: 8px;
   margin-bottom: 9px;
   color: rgb(255, 255, 255);
   font-family: PT Serif;
@@ -87,6 +86,7 @@ export default {
 }
 
 .finish-subheadding {
+  width: 268px;
   color: rgb(255, 255, 255);
   font-family: PT Serif;
   font-size: 14px;
@@ -141,21 +141,21 @@ export default {
 }
 
 .img-container {
-  position: relative; 
+  position: relative;
 }
 
 .result-img-left {
   position: absolute;
   width: 200px;
-    height: 200px;
-    right: 458px;
-    top: 363px;
+  height: 200px;
+  right: -130px;
+  top: 6px;
 }
 
 .result-img-right {
   position: absolute;
-  top: 391px;
-  right: 70px;
+  top: -62px;
+  right: 203px;
 }
 
 .finish-tel {
@@ -169,7 +169,8 @@ export default {
   align-items: center;
   gap: 18px;
   cursor: pointer;
-  margin-bottom: 140px;
+  margin-bottom: 120px;
+  position: sticky;
 }
 
 .finish-tel-text {
@@ -183,6 +184,7 @@ export default {
 }
 
 .agree {
+  width: 294px;
   color: rgba(255, 255, 255, 0.5);
   font-family: Roboto;
   font-size: 7px;

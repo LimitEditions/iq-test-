@@ -1,6 +1,8 @@
 .question {
   height: 522px;
-  background: url(../assets/img/backgroundfooter.png), rgb(13, 12, 17);
+  background: url(../assets/img/backgroundfooter.png), rgba(13, 12, 17, 0.73);
+  background-blend-mode: overlay;
+  background-size: cover;
   margin: 0;
   display: flex;
   flex-direction: column;

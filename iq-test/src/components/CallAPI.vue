@@ -1,39 +1,44 @@
 <template>
-  <div>
-    <Header />
     <div v-if="result" class="api-result-text api-result">
       <h3>{{ result.name }}</h3>
       <p>Рост: {{ result.height }} см</p>
       <p>Вес: {{ result.mass }} кг</p>
+      <p>Цвет волос: {{ result.hair_color }} </p>
+      <p>Цвет кожи: {{ result.skin_color }} </p>
+      <p>Цвет глаз: {{ result.eye_color }}</p>
+      <p>День рождения: {{ result.birth_year }}</p>
+      <p>Пол: {{ result.gender }} </p>
+      <p>Дом: {{ homeworldName }} </p>
+      <p v-for="(film, index) in films" :key="index">Фильм: {{ film }}</p>
     </div>
-  </div>
 </template>
 
 <script>
-import Header from "./Header.vue";
 import axios from "axios";
 export default {
-  components: {
-    Header,
-  },
   data() {
     return {
       result: null,
+       films: [],
+      homeworldName: ''
     };
   },
   mounted() {
     this.fetchData();
   },
   methods: {
-    fetchData() {
-      axios
-        .get("https://swapi.dev/api/people/1/")
-        .then((response) => {
-          this.result = response.data;
-        })
-        .catch((error) => {
-          console.error("Ошибка при загрузке данных:", error);
-        });
+    async fetchData() {
+      try {
+        const response = await axios.get("https://swapi.dev/api/people/1/");
+        this.result = response.data;
+        const homeworldResponse = await axios.get(this.result.homeworld);
+        this.homeworldName = homeworldResponse.data.name;
+        const filmPromises = this.result.films.map(filmUrl => axios.get(filmUrl));
+        const filmResponses = await Promise.all(filmPromises);
+        this.films = filmResponses.map(filmResponse => filmResponse.data.title);
+      } catch (error) {
+        console.error("Ошибка при загрузке данных:", error);
+      }
     },
   },
 };
